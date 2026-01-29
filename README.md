@@ -9,14 +9,15 @@
 1.3 Decide where you will save outputs and screenshots for later upload to GitHub.
   - mkdir ~/nmap-scans && cd ~/nmap-scans
   - sudo nmap -A 192.168.1.1 -oA scan_results
-       # Nmap 7.98 scan initiated Thu Jan 29 01:06:49 2026 as: /usr/lib/nmap/nmap -A -oA scan_results 192.168.1.1
-       # Nmap done at Thu Jan 29 01:06:53 2026 -- 1 IP address (0 hosts up) scanned in 3.26 seconds
+<ol> Reports  
+  - Nmap 7.98 scan initiated Thu Jan 29 01:06:49 2026 as: /usr/lib/nmap/nmap -A -oA scan_results 192.168.1.1
+  - Nmap done at Thu Jan 29 01:06:53 2026 -- 1 IP address (0 hosts up) scanned in 3.26 seconds </ol>
        
 ### 2. Scan the local network
 2.1 Find your IP and network range (192.168.1.0/24).
 
-ip a
--- 192.168.21.129/24 
+- ip a
+   - 192.168.21.129/24 
 
 2 .2 Run a basic ping scan to discover live hosts, for example: nmap -sn 192.168.1.0/24.
 
