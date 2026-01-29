@@ -14,9 +14,12 @@
        
 ### 2. Scan the local network
 2.1 Find your IP and network range (192.168.1.0/24).
+
 ip a
 -- 192.168.21.129/24 
+
 2 .2 Run a basic ping scan to discover live hosts, for example: nmap -sn 192.168.1.0/24.
+
 ```└─$ nmap -sn 192.168.21.129/24 
 Starting Nmap 7.98 ( https://nmap.org ) at 2026-01-29 01:25 -0500
 Nmap scan report for 192.168.21.1
@@ -32,26 +35,32 @@ Nmap scan report for 192.168.21.129
 Host is up.
 Nmap done: 256 IP addresses (4 hosts up) scanned in 4.05 seconds
 ```
+
 2.3 Note which IPs are up; you can screenshot this result.
 
 IMAGE --> Result
 
-3. Identify open ports
+### 3. Identify open ports
+
 3.1 Choose 1–3 target IPs from the discovered hosts.
-- 192.168.21.129/24 
+- 192.168.21.129/24
+- 
 3.2 Run a port scan, for example: nmap -p- 192.168.1.10 or nmap -sS 192.168.1.10.
-sudo nmap -p- 192.168.21.129/24 
+sudo nmap -p- 192.168.21.129/24
+
 3.3 Record which ports are open (e.g., 22, 80, 443). Screenshot or save output
-  
 Result --> IMAGE 
-4. Detect services and versions
+
+### 4. Detect services and versions
+
 4.1 For the same IP, run service scan: nmap -sV 192.168.1.10.
 nmap -sV 192.168.21.129/24 
+
 4.2 This will show which service is running on each open port and sometimes the version (e.g., Apache httpd 2.4.x).
 RESULT ---> image 
 
-5. Identify OS
-Run OS detection: nmap -O 192.168.1.10 (you can combine options like nmap -sV -O 192.168.1.10).
--- sudo nmap -sV -O 192.168.21.129/24
+#### 5. Identify OS
 
-   
+Run OS detection: nmap -O 192.168.1.10 (you can combine options like nmap -sV -O 192.168.1.10).
+-- sudo nmap -sV -O 192.168.21.129/2
+
